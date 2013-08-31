@@ -1,0 +1,15 @@
+Description
+===========
+
+This is an equivalent for windows of the tool jstest.
+Unfortunately, it does not support axes 2 to 5 currently.
+
+Usage
+=====
+
+Get the jstest.exe.
+Launch a command prompt via:
+Windows+r, then enter "cmd", then type "cd C:\install\folder"
+Where C:\install\directory is the folder where you saved the exe.
+Then type "jstest.exe".
+This will display your joystick keys and axes status.
