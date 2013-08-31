@@ -7,9 +7,14 @@ Unfortunately, it does not support axes 2 to 5 currently.
 Usage
 =====
 
-Get the jstest.exe.
+Install jstest.exe to a directory.
 Launch a command prompt via:
-Windows+r, then enter "cmd", then type "cd C:\install\folder"
-Where C:\install\directory is the folder where you saved the exe.
+Windows+r, then enter "cmd".
+This will open a command line window.
+Then type "dir C:\install\folder"
+Where C:\install\folder is the folder where you saved the exe.
+This will change the working folder
+to the folder where you installed jstest.
+Plug your gamepad or joystick in.
 Then type "jstest.exe".
 This will display your joystick keys and axes status.
