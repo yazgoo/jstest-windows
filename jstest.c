@@ -2,7 +2,7 @@
 #include <stdio.h>
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 TCHAR szClassName[ ] = TEXT("CodeBlocksWindowsApp");
-int WINAPI WinMain (HINSTANCE hThisInstance,
+int WINAPI WinMain(HINSTANCE hThisInstance,
                      HINSTANCE hPrevInstance,
                      LPSTR lpszArgument,
                      int nCmdShow)
@@ -97,10 +97,16 @@ LRESULT CALLBACK WindowProcedure(
             display_buttons(axes, buttons, 13);
             break;
         case MM_JOY1BUTTONDOWN:
+            for(i = 0; i < 13; i++)
+                printf("%s", wParam & ( 1 << i ) ?  "1":"0");
+            printf("\n");
             process_buttons(buttons, wParam, 1);
             display_buttons(axes, buttons, 13);
             break;
         case MM_JOY1BUTTONUP:
+            for(i = 0; i < 13; i++)
+                printf("%s", wParam & ( 1 << i ) ?  "1":"0");
+            printf("\n");
             process_buttons(buttons, wParam, 0);
             display_buttons(axes, buttons, 13);
             break;
@@ -109,6 +115,5 @@ LRESULT CALLBACK WindowProcedure(
         default:
             return DefWindowProc (hwnd, message, wParam, lParam);
     }
-
     return 0;
 }
